@@ -17,6 +17,12 @@ public final class Containment implements IFeature
 	@Override
 	public String checkFeature(final Rectangle r1, final Rectangle r2)
 	{
+		int xMin= Math.min(r1.getX1(), r2.getX1());
+		if(xMin == r2.getX1()) {
+			Rectangle temp = r1;
+			r1 = r2;
+			r2 = temp;
+		}
 		int x = r1.getX1();
 		int y = r1.getY1();
 
