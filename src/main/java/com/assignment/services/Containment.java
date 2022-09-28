@@ -18,7 +18,8 @@ public final class Containment implements IFeature
 	public String checkFeature(final Rectangle r1, final Rectangle r2)
 	{
 		int xMin= Math.min(r1.getX1(), r2.getX1());
-		if(xMin == r2.getX1()) {
+		int xMax= Math.max(r1.getX2(),r2.getX2());
+		if((r1.getX1()!= r2.getX1() && xMin == r2.getX1()) || (r1.getX1() == r2.getX1() && xMax == r2.getX2() ) ) {
 			Rectangle temp = r1;
 			r1 = r2;
 			r2 = temp;
