@@ -52,7 +52,7 @@ public final class Adjacency implements IFeature
 				return "Adjacency Proper";
 			} else if( (x5 ==r1.getX1() && x6 == r1.getX2()) ||
 					   x5 ==r2.getX1() && x6 == r2.getX2()){
-				return "Adjacency Subline";
+				return "Adjacency Sub line";
 			} else {
 				return "Adjacency Partial";
 			}
